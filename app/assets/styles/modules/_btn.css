@@ -1,0 +1,20 @@
+
+.btn{
+  background: $mainPurple;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.1rem;
+  display: inline-block;
+
+  &--large{
+    border: solid 0.85px white;
+    background: $mainPurple;
+    color: #FFF;
+    font-size: 1.1rem;
+    box-shadow: 0px 5px 10px #888888;
+  }
+  &--large{
+    font-size: 1.25rem;
+    padding: 1.1rem 1.9;
+  }
+}

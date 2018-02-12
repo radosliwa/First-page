@@ -453,6 +453,11 @@ template {
 /* nie trzeba navigowac do
 node_modules dzieki postcss-import*/
 
+*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body{
   font-family: 'Merriweather', sans-serif;
   color: #333;
@@ -487,10 +492,10 @@ img{
 .large-banner__title{
     margin: 0;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-style: italic;
     color: #FFF;
-    text-shadow: 2px 2px 10px black;
+    text-shadow: 2px 2px 10px #000000;
   }
 
 .large-banner__subtitle{
@@ -499,12 +504,41 @@ img{
     font-size: 2.5rem;
     font-style: italic;
     color: #FFF;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px #000000;
   }
 
 .large-banner__description{
+    font-style: italic;
     margin-top: 2rem;
     color: #FFF;
-    font-size: 1.2rem;
+    font-size: 1.255rem;
     text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2rem;
+  }
+
+.btn{
+  background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
+  background: linear-gradient(to top, #c94b4b, #4b134f);
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.1rem;
+  display: inline-block;
+}
+
+.btn--large{
+    border: solid 0.85px white;
+    background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
+    background: linear-gradient(to top, #c94b4b, #4b134f);
+    color: #FFF;
+    font-size: 1.1rem;
+    -webkit-box-shadow: 0px 5px 10px #888888;
+            box-shadow: 0px 5px 10px #888888;
+  }
+
+.btn--large{
+    font-size: 1.25rem;
+    padding: 1.1rem 1.9;
   }
