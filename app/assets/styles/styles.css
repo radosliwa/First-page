@@ -2,5 +2,6 @@
 node_modules dzieki postcss-import*/
 @import "base/_global";
 @import 'base/_variables';
+@import 'base/_mixins';
 @import "modules/_large-banner";
 @import "modules/_btn";
