@@ -4,7 +4,7 @@
   color: $mainDarkPurple;
 
   @mixin atSmall{
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   &--centered{
@@ -21,19 +21,22 @@
       font-weight: bold;
     }
     @mixin atSmall{
-  font-size: 1.4rem;    }
-  }
+      font-size: 1.4rem;    }
+    }
 
-  &--narrow{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &--b-margin-small{
-    margin-bottom: 1em;
+    &--narrow{
+      max-width: 378px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &--b-margin-small{
+      margin-bottom: 1em;
 
+    }
+    &--b-margin-large{
+      margin-bottom: 2em;
+    }
+    &--no-t-margin{
+      margin-top: 0;
+    }
   }
-  &--b-margin-large{
-    margin-bottom: 2em;
-  }
-}

@@ -468,6 +468,10 @@ img{
           box-sizing: border-box;
 }
 
+a{
+  color: rgb(59, 0, 61);
+}
+
 .large-banner{
   border-bottom: 10px solid rgb(59, 0, 61);
   position: relative;
@@ -643,7 +647,8 @@ img{
   overflow:hidden;
   padding-left: 18px;
   padding-right:18px;
-  max-width: 1200px;
+  max-width: 1236px; /*to offset padding 18 x 2
+                      after border-box */
   margin-left: auto;
   margin-right: auto;
 }
@@ -655,6 +660,17 @@ img{
 .wrapper .wrapper{
     padding-left: 0;
     padding-right: 0;
+  }
+
+.wrapper--b-margin{
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 530px){
+
+.wrapper--b-margin{
+    margin-bottom: 3.875rem
+}
   }
 
 .section{
@@ -679,13 +695,13 @@ img{
   font-weight: 300;
   font-size: 1.2rem;
   color: rgb(59, 0, 61);
-}
+  }
 
 @media(min-width: 530px){
 
 .headline{
-  font-size: 1.5rem
-}
+    font-size: 1.5rem
+  }
   }
 
 .headline--centered{
@@ -698,7 +714,7 @@ img{
 
 .headline--small{
     font-size: 1.2rem;
-  }
+    }
 
 .headline--small strong{
       font-weight: bold;
@@ -707,41 +723,33 @@ img{
 @media(min-width: 530px){
 
 .headline--small{
-  font-size: 1.4rem
-  }
+      font-size: 1.4rem
+    }
   }
 
 .headline--narrow{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+      max-width: 378px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
 .headline--b-margin-small{
-    margin-bottom: 1em;
+      margin-bottom: 1em;
 
-  }
+    }
 
 .headline--b-margin-large{
-    margin-bottom: 2em;
-  }
+      margin-bottom: 2em;
+    }
+
+.headline--no-t-margin{
+      margin-top: 0;
+    }
 
 .row::after{
     content:"";
     display: table;
     clear: both;
-  }
-
-@media(min-width: 800px){
-    .row__medium-4{
-      float:left;
-      width: 33.33%;
-    }
-
-    .row__medium-8{
-      float:left;
-      width: 66.66%;
-    }
   }
 
 .row--gutters{
@@ -750,4 +758,44 @@ img{
 
 .row--gutters > div{
     padding-right: 65px;
+  }
+
+.row__b-margin-until-medium{
+    margin-bottom: 1rem;
+  }
+
+@media(min-width: 800px){
+    .row__b-margin-until-medium{
+    margin-bottom: 0;
+    }
+    .row__medium-4{
+      float:left;
+      width: 33.33%;
+    }
+    .row__row__medium-4-larger{
+      width: 37%;
+    }
+    .row__medium-8{
+      float:left;
+      width: 66.66%;
+    }
+    .row____medium-8-smaller{
+      width: 63%;
+    }
+  }
+
+.generic-content-container p{
+    line-height: 1.65;
+    margin: 1.8rem 0;
+  }
+
+@media(min-width: 530px){
+
+.generic-content-container p{
+      font-size: 1.125rem
+  }
+  }
+
+.generic-content-container p a{
+    font-weight: bold;
   }
