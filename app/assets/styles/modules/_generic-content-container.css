@@ -12,4 +12,12 @@
     font-weight: bold;
   }
 
+  &--italic{
+    color: $mainDarkPurple;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+
 }
