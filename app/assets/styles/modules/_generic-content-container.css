@@ -13,7 +13,7 @@
   }
 
   &--italic{
-    color: $mainDarkPurple;
+    color: #FFF;
     text-align: justify;
     line-height: 1.6;
     font-size: 1.1rem;
