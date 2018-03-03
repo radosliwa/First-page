@@ -1084,6 +1084,8 @@ a{
     position: relative;
     top: -80px;
     border: 6px solid rgba(255, 255, 255, .3);
+    -webkit-box-shadow: 0px 5px 18px 1px black;
+            box-shadow: 0px 5px 18px 1px black; 
   }
 
 .testimonial__title{
