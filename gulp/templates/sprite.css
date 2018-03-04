@@ -4,10 +4,10 @@ Instead edit gulp/templates/sprite */
 {{#shapes}}
 
 {{#first}}
-.icon{
-  background-image: url('/temp/sprite/css/{{{sprite}}}');
+.icon {
+  background-image: url('/assets/images/sprites/{{{sprite}}}');
 }
-{{/first}} /*runs only once in the beginning*/
+{{/first}} /*runssonly once in the beginning*/
 
   .icon--{{base}} {
     width: {{width.outer}}px;
