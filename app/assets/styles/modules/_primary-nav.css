@@ -1,0 +1,26 @@
+.primary-nav{
+
+  &--pull-right{
+  float: right;
+  }
+/*here BEM would  be an overkill*/
+  ul{
+  padding: 0;
+  margin:0;
+  @mixin clearfix;
+  }
+
+  li{
+  list-style: none;
+  float: left;
+  padding-right: 20px;
+  }
+
+  a{
+    text-decoration: none;
+    font-weight: lighter;
+    color: #FFF;
+    display: block;
+    padding: 12px 0;
+  }
+}
