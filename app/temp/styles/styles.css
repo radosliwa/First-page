@@ -501,10 +501,6 @@ a{
   }
 
 @media(min-width: 800px){
-
-.large-banner__text-content{
-      padding-top: 3rem
-  }
   }
 
 .large-banner__title{
@@ -533,7 +529,7 @@ a{
 @media(min-width: 1010px){
 
 .large-banner__title{
-      font-size: 3.6rem
+      font-size: 3.3rem
   }
   }
 
@@ -563,7 +559,7 @@ a{
 @media(min-width: 1010px){
 
 .large-banner__subtitle{
-      font-size: 2.5rem
+      font-size: 2.3rem
   }
   }
 
@@ -592,7 +588,7 @@ a{
 @media(min-width: 1010px){
 
 .large-banner__description{
-      font-size: 1.5rem;
+
       width: 30%
 
   }
@@ -1239,19 +1235,29 @@ Instead edit gulp/templates/sprite */
 .site-header{
   padding: 10px 0;
   position: absolute;
-  z-index: 2;
   width: 100%;
+  z-index: 2;
+
 }
+
+.site-header--is-expanded{
+    background-color: rgba(45, 0, 57, 0.4);
+    height: 50%;
+  }
 
 @media(min-width: 800px){
 
 .site-header{
     background-color: rgba(45,0,57, .5)
+
 }
   }
 
+@media(min-width: 800px){
+
 .site-header__btn-container{
-    float: right;
+      float: right
+  }
   }
 
 .site-header__logo{
@@ -1307,12 +1313,15 @@ Instead edit gulp/templates/sprite */
 
 .site-header__menu-content{
     display: none;
+    padding-top: 100px;
+    text-align: center;
   }
 
 @media(min-width: 800px){
 
 .site-header__menu-content{
-      display:block
+      display:block;
+      padding-top: 0
   }
   }
 
@@ -1320,11 +1329,14 @@ Instead edit gulp/templates/sprite */
       display: block;
     }
 
+@media(min-width: 800px){
+
 .primary-nav--pull-right{
-  float: right;
+      float: right
+  }
   }
 
-/*here BEM would  be an overkill*/
+/*here BEM would be an overkill*/
 
 .primary-nav ul{
   padding: 0;
@@ -1338,9 +1350,31 @@ Instead edit gulp/templates/sprite */
   }
 
 .primary-nav li{
-  list-style: none;
-  float: left;
-  padding-right: 20px;
+    list-style: none;
+    display: inline-block;
+    padding-right: 7px;
+  }
+
+@media(min-width: 800px){
+
+.primary-nav li{
+      padding-right: 20px;
+      display: block;
+      float: left
+  }
+  }
+
+/*last one doesnt need padding right*/
+
+.primary-nav li:last-child{
+    padding-right: 0;
+  }
+
+@media(min-width: 800px){
+
+.primary-nav li:last-child{
+      padding-right: 20px
+  }
   }
 
 .primary-nav a{
