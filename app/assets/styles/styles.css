@@ -18,3 +18,5 @@ node_modules dzieki postcss-import*/
 @import "modules/_site-header";
 @import "modules/_primary-nav";
 @import "modules/_reveal-item";
+@import "modules/_overlay";
+@import "modules/_social-icons";

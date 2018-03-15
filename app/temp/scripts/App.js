@@ -11109,12 +11109,17 @@ var _HeaderSticks = __webpack_require__(5);
 
 var _HeaderSticks2 = _interopRequireDefault(_HeaderSticks);
 
+var _Overlay = __webpack_require__(7);
+
+var _Overlay2 = _interopRequireDefault(_Overlay);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '60%');
 var headerSticks = new _HeaderSticks2.default();
+var overlay = new _Overlay2.default();
 
 /***/ }),
 /* 3 */
@@ -11296,17 +11301,29 @@ var HeaderSticks = function () {
     key: 'createSectionWaypoints',
     value: function createSectionWaypoints() {
       var that = this;
-      this.pageSections.each(function () {
+      this.pageSections.each(function (direction) {
         var currentSection = this;
-        new Waypoint({
-          element: currentSection,
-          handler: function handler() {
-            var navLink = currentSection.getAttribute("data-match-link");
-            that.NavLinks.removeClass('is-current-link');
-            (0, _jquery2.default)(navLink).addClass("is-current-link");
-          },
-          offset: "4%"
-        });
+        if (direction === 'down') {
+          new Waypoint({
+            element: currentSection,
+            handler: function handler() {
+              var navLink = currentSection.getAttribute("data-match-link");
+              that.NavLinks.removeClass('is-current-link');
+              (0, _jquery2.default)(navLink).addClass("is-current-link");
+            },
+            offset: "25%"
+          });
+        } else {
+          new Waypoint({
+            element: currentSection,
+            handler: function handler() {
+              var navLink = currentSection.getAttribute("data-match-link");
+              that.NavLinks.removeClass('is-current-link');
+              (0, _jquery2.default)(navLink).addClass("is-current-link");
+            },
+            offset: "15%"
+          });
+        }
       });
     }
   }]);
@@ -11682,6 +11699,70 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Overlay = function () {
+  function Overlay() {
+    _classCallCheck(this, Overlay);
+
+    this.openOverlayButton = (0, _jquery2.default)('.open-overlay');
+    this.overlay = (0, _jquery2.default)('.overlay');
+    this.closeButton = (0, _jquery2.default)(".overlay__close");
+    this.events();
+  }
+
+  _createClass(Overlay, [{
+    key: 'events',
+    value: function events() {
+      this.openOverlayButton.click(this.openOverlay.bind(this));
+      this.closeButton.click(this.closeOverlay.bind(this));
+      (0, _jquery2.default)(document).keyup(this.pressedKeyHandler.bind(this));
+    }
+  }, {
+    key: 'pressedKeyHandler',
+    value: function pressedKeyHandler(e) {
+      if (e.which == 27) {
+        this.closeOverlay();
+      }
+    }
+  }, {
+    key: 'openOverlay',
+    value: function openOverlay() {
+      this.overlay.addClass('overlay--is-visible');
+      return false;
+      /* nie bedzie defaultowo cofac sie do top of the page*/
+    }
+  }, {
+    key: 'closeOverlay',
+    value: function closeOverlay() {
+      this.overlay.removeClass('overlay--is-visible');
+    }
+  }]);
+
+  return Overlay;
+}();
+
+exports.default = Overlay;
 
 /***/ })
 /******/ ]);

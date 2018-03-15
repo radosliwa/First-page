@@ -25,6 +25,10 @@
       text-shadow: none;
     }
   }
+  &--dark{
+    color:$mainDarkPurple;
+    margin-top:0;
+  }
 
   &__icon{
 

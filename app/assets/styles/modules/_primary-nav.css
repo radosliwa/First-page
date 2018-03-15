@@ -48,7 +48,7 @@
       background-color:transparent;
 
       &.is-current-link{
-        color: #fabb69;
+        color: $mainOrange;
       }
     }
   }

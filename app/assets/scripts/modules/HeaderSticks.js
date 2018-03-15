@@ -34,17 +34,30 @@ class HeaderSticks{
 
   createSectionWaypoints(){
     var that = this;
-    this.pageSections.each(function(){
+    this.pageSections.each(function(direction){
       var currentSection = this;
-      new Waypoint({
-        element:currentSection,
-        handler: function(){
-          var navLink = currentSection.getAttribute("data-match-link");
-          that.NavLinks.removeClass('is-current-link');
-          $(navLink).addClass("is-current-link");
-        },
-        offset: "4%"
-      });
+      if(direction==='down'){
+        new Waypoint({
+          element:currentSection,
+          handler: function(){
+            var navLink = currentSection.getAttribute("data-match-link");
+            that.NavLinks.removeClass('is-current-link');
+            $(navLink).addClass("is-current-link");
+          },
+          offset: "25%"
+        });
+      }else{
+        new Waypoint({
+          element:currentSection,
+          handler: function(){
+            var navLink = currentSection.getAttribute("data-match-link");
+            that.NavLinks.removeClass('is-current-link');
+            $(navLink).addClass("is-current-link");
+          },
+          offset: "15%"
+        });
+      }
+
     });
   }
 }

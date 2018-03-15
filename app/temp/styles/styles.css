@@ -662,6 +662,10 @@ a{
     max-width: 976px;
   }
 
+.wrapper--narrow{
+    max-width: 470px;
+  }
+
 .wrapper--no-padding-until-medium{
     padding-left: 0;
     padding-right: 0;
@@ -771,7 +775,7 @@ a{
   }
 
 .headline--orange{
-    color: rgb(244, 87, 87);
+    color: #fabb69;
   }
 
 .headline--small{
@@ -994,6 +998,11 @@ a{
   }
   }
 
+.section-title--dark{
+    color:#2D0039;
+    margin-top:0;
+  }
+
 .section-title__icon{
 
     display:block;
@@ -1090,7 +1099,7 @@ a{
     top: -80px;
     border: 6px solid rgba(255, 255, 255, .3);
     -webkit-box-shadow: 0px 5px 18px 1px black;
-            box-shadow: 0px 5px 18px 1px black; 
+            box-shadow: 0px 5px 18px 1px black;
   }
 
 .testimonial__title{
@@ -1502,3 +1511,90 @@ Instead edit gulp/templates/sprite */
     -webkit-transform:scale(1);
             transform:scale(1);
   }
+
+.overlay{
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(255,255,255,.9);
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden; /*bo przy samym opacity nadal pojawial
+  sie pointer*/
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all .3 ease-out;
+  transition: all .3 ease-out;
+}
+
+.overlay--is-visible{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+
+  }
+
+.overlay__description{
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.65;
+    font-weight: 400;
+
+  }
+
+.overlay__close{
+    position: absolute;
+    top:15px;
+    right:15px;
+    font-size: 2rem;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+  }
+
+.overlay__close:hover{
+      color: #fabb69;
+      cursor: pointer;
+    }
+
+.overlay__center{
+    position: absolute;
+    width: 100%;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons__icon {
+    background-color: #69076b;
+      display: inline-block;
+    margin: 0 5px 5px 5px;
+    width: 33%;
+    height: 72px;
+    position: relative;
+  }
+
+@media(min-width: 530px){
+
+.social-icons__icon {
+      width: 72px;
+      margin: 0 5px
+  }
+  }
+
+.social-icons__icon .icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
