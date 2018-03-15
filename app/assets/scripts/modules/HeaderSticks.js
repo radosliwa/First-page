@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class HeaderSticks{
   constructor(){
+    this.lazyImages = $('.lazyload');
     this.SiteHeader = $('.site-header');
     this.TriggerEl = $('.large-banner__title');
     this.pageSections = $('.section');
@@ -11,8 +12,14 @@ class HeaderSticks{
     this.createHeaderWaypoint();
     this.createSectionWaypoints();
     this.createSmoothScroll();
+    this.refreshWaypoints();
   }
 
+  refreshWaypoints(){
+    this.lazyImages.on('load',function(){
+      Waypoint.refreshAll();
+    })
+    }
   createSmoothScroll(){
     this.NavLinks.smoothScroll();
   }
