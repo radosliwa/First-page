@@ -61,7 +61,7 @@ class HeaderSticks{
             that.NavLinks.removeClass('is-current-link');
             $(navLink).addClass("is-current-link");
           },
-          offset: "15%"
+          offset: "5%"
         });
       }
 

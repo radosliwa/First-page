@@ -11330,7 +11330,7 @@ var HeaderSticks = function () {
               that.NavLinks.removeClass('is-current-link');
               (0, _jquery2.default)(navLink).addClass("is-current-link");
             },
-            offset: "15%"
+            offset: "5%"
           });
         }
       });
