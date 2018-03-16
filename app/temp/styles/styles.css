@@ -751,7 +751,7 @@ a{
   }
 
 .section--testimonials.lazyloaded{
-      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+      background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
       background-size: cover;
 
     }
@@ -1119,7 +1119,7 @@ a{
 Instead edit gulp/templates/sprite */
 
 .icon {
-  background-image: url('/assets/images/sprites/sprite-e79e95cc.svg');
+  background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg');
 }
 
 /*runssonly once in the beginning*/
