@@ -1,11 +1,9 @@
-
 .social-icons {
   text-align: center;
 
-
   &__icon {
     background-color: #69076b;
-      display: inline-block;
+    display: inline-block;
     margin: 0 5px 5px 5px;
     width: 33%;
     height: 72px;
