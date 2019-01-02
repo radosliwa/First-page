@@ -453,12 +453,12 @@ template {
 /* nie trzeba navigowac do
 node_modules dzieki postcss-import*/
 
-body{
+body {
   font-family: 'Merriweather', sans-serif;
   color: #333;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
@@ -468,7 +468,7 @@ img{
           box-sizing: border-box;
 }
 
-a{
+a {
   color: #2D0039;
 }
 
@@ -486,6 +486,21 @@ a{
           align-items: center;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+.large-banner {
+    display: block
+}
+
+    .large-banner__text-content {
+      position: absolute;
+      /*top: 0;
+      left: 0;*/
+      width: 100%;
+      text-align: center;
+    }
+  }
+
 .large-banner__image {
     display: block;
     /*eliminated gap between img and border*/
@@ -500,7 +515,7 @@ a{
     text-align: center;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
   }
 
 .large-banner__title {
@@ -512,21 +527,21 @@ a{
     font-size: 1.4rem;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .large-banner__title {
       font-size: 2.5rem
   }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .large-banner__title {
       font-size: 3rem
   }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .large-banner__title {
       font-size: 3.3rem
@@ -542,21 +557,21 @@ a{
     text-shadow: 2px 2px 5px #000000;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .large-banner__subtitle {
       font-size: 2.1rem
   }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .large-banner__subtitle {
       font-size: 2.2rem
   }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .large-banner__subtitle {
       font-size: 2.3rem
@@ -575,7 +590,7 @@ a{
     font-size: 1.1rem;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .large-banner__description {
       font-size: 1.4rem;
@@ -583,7 +598,7 @@ a{
   }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .large-banner__description {
       width: 30%
@@ -597,22 +612,27 @@ a{
   text-decoration: none;
   padding: .85rem 1.1rem;
   display: inline-block;
+  -webkit-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
+
+.btn:hover {
+    border-radius: 50px;
+    text-shadow: 1px 2px 12px rgba(255, 255, 255, 1);
+  }
 
 .btn--large {
     padding: .6rem .6rem;
     border: solid 0.85px white;
+    border-radius: 50px;
     background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
     background: linear-gradient(to top, #c94b4b, #4b134f);
     color: #FFF;
     font-size: 1rem;
-    border-radius: 50px;
     -webkit-box-shadow: 0px 3px 7px #888888;
             box-shadow: 0px 3px 7px #888888;
     margin-top: 7%;
   }
-
-.btn--large:hover {}
 
 .btn--large:active {
       -webkit-box-shadow: 0px 3px 1px #888888;
@@ -621,7 +641,7 @@ a{
       transition: all 0.6s ease 0s;
     }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .btn--large {
       font-size: 1.05rem;
@@ -629,24 +649,22 @@ a{
   }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .btn--large {
-      border-radius: 0px;
+      border-radius: 10px;
       font-size: 1.2rem
   }
 
       .btn--large:hover {
-        border-radius: 50px;
-        text-shadow: 0px 1px 7px rgba(255, 255, 255, 1);
-        -webkit-box-shadow: 0px 1px 3px #888888;
-                box-shadow: 0px 1px 3px #888888;
-        -webkit-transition: all 0.6s ease 0s;
-        transition: all 0.6s ease 0s;
+        -webkit-box-shadow: 0px 0px 1px #888888;
+                box-shadow: 0px 0px 1px #888888;
+        -webkit-transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;
       }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .btn--large {
       padding: .8rem 1rem;
@@ -680,7 +698,7 @@ a{
     padding-right: 0;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .wrapper--no-padding-until-medium{
       padding-left: 18px;
@@ -693,7 +711,7 @@ a{
       padding-right: 0;
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .wrapper--no-padding-until-large{
         padding-left: 18px;
@@ -710,7 +728,7 @@ a{
     margin-bottom: 1rem;
 }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .wrapper--b-margin{
     margin-bottom: 3.875rem
@@ -722,7 +740,7 @@ a{
   padding: 1.2rem 0;
 }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .section{
     padding: 4.5rem 0
@@ -733,7 +751,7 @@ a{
     padding-bottom: 0;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .section--no-b-padding-until-medium{
       padding-bottom: 4.5rem
@@ -746,7 +764,7 @@ a{
     padding-bottom: 0;
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .section--no-b-padding-until-large{
       padding-bottom: 4.5rem
@@ -771,7 +789,7 @@ a{
   color: #2D0039;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .headline{
     font-size: 1.5rem
@@ -794,7 +812,7 @@ a{
       font-weight: bold;
     }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .headline--small{
       font-size: 1.4rem
@@ -820,8 +838,8 @@ a{
       margin-top: 0;
     }
 
-.row::after{
-    content:"";
+.row::after {
+    content: "";
     display: table;
     clear: both;
   }
@@ -858,7 +876,7 @@ a{
     margin-bottom: 1rem;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
     .row__b-margin-until-medium {
       margin-bottom: 0;
     }
@@ -887,7 +905,7 @@ a{
     }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
     .row__b-margin-until-large {
       margin-bottom: 0;
     }
@@ -916,7 +934,7 @@ a{
     }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .row--equal-height-at-medium {
       display: -webkit-box;
@@ -932,7 +950,7 @@ a{
       display: flex;
     }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .row--equal-height-at-large {
       display: -webkit-box;
@@ -954,7 +972,7 @@ a{
     margin: 0 0 2rem 0;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .generic-content-container p {
       font-size: 1rem
@@ -981,14 +999,14 @@ a{
   text-shadow: 1px 2px 5px #000000;
 }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .section-title{
     font-size: 3rem
 }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .section-title{
     margin-bottom: 2rem;
@@ -1006,7 +1024,7 @@ a{
     text-shadow: 1px 2px 5px #000000;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .section-title--white{
       font-size: 3rem;
@@ -1028,7 +1046,7 @@ a{
 
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .section-title__icon{
       position: relative;
@@ -1047,7 +1065,7 @@ a{
 
 }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .feature-item{
         padding-left: 94px
@@ -1060,7 +1078,7 @@ a{
   margin: 0 auto;
     }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .feature-item__icon{
         position: absolute;
@@ -1076,7 +1094,7 @@ a{
       text-align: center;
     }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .feature-item__title{
         text-align: left;
@@ -1085,30 +1103,31 @@ a{
     }
   }
 
-.testimonial{
+.testimonial {
   background-color: rgba(59, 0, 61, .3);
   padding: 0 18px 1px 18px;
   margin-bottom: 110px;
 }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
-.testimonial{
+.testimonial {
     padding: 0 1.81rem 1px 1.81rem;
     margin-bottom: 0
 }
   }
 
-.testimonial--last{
+.testimonial--last {
     margin-bottom: 0;
   }
 
-.testimonial__foto{
+.testimonial__foto {
     border-radius: 50%;
     overflow: hidden;
     width: 160px;
     height: 160px;
-    margin: 0 auto -80px auto;/* 80
+    margin: 0 auto -80px auto;
+    /* 80
     bo przy relative reszta contentu nie zauwazyla
     ze przesunelo sie w gore o 80px*/
     position: relative;
@@ -1118,14 +1137,13 @@ a{
             box-shadow: 0px 5px 18px 1px black;
   }
 
-.testimonial__title{
+.testimonial__title {
     color: #FFF;
     text-align: center;
     font-size: 1.5rem;
-
   }
 
-.testimonial__subtitle{
+.testimonial__subtitle {
     color: #2D0039;
     text-align: center;
     font-size: 0.9rem;
@@ -1255,7 +1273,7 @@ Instead edit gulp/templates/sprite */
     margin-bottom: 1rem;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-footer__text{
 
@@ -1278,7 +1296,7 @@ Instead edit gulp/templates/sprite */
     background-color: rgba(45, 0, 57, 0.8);
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-header {
     position: fixed;
@@ -1290,7 +1308,7 @@ Instead edit gulp/templates/sprite */
     }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-header__btn-container {
       float: right
@@ -1311,7 +1329,7 @@ Instead edit gulp/templates/sprite */
     transition: transform .5s ease-out, -webkit-transform .5s ease-out;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .site-header__logo {
       -webkit-transform: translateX(-50%) scale(.485);
@@ -1319,7 +1337,7 @@ Instead edit gulp/templates/sprite */
   }
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-header__logo {
       /* padding: 25px 36px; */
@@ -1329,7 +1347,7 @@ Instead edit gulp/templates/sprite */
   }
   }
 
-@media(min-width: 1010px){
+@media(min-width: 1010px) {
 
 .site-header__logo {
       /* padding: 25px 36px; */
@@ -1402,7 +1420,7 @@ Instead edit gulp/templates/sprite */
       transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-header__menu-icon {
       display: none
@@ -1440,7 +1458,7 @@ Instead edit gulp/templates/sprite */
     text-align: center;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .site-header__menu-content {
       opacity: 1;
@@ -1458,7 +1476,7 @@ Instead edit gulp/templates/sprite */
               transform: scale(1);
     }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .primary-nav--pull-right{
       float: right
@@ -1472,13 +1490,13 @@ Instead edit gulp/templates/sprite */
   margin-top: 3%;
   }
 
-.primary-nav ul::after{
-    content:"";
+.primary-nav ul::after {
+    content: "";
     display: table;
     clear: both;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .primary-nav ul{
     margin:0
@@ -1491,7 +1509,7 @@ Instead edit gulp/templates/sprite */
     padding-right: 7px;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .primary-nav li{
       padding-right: 20px;
@@ -1506,7 +1524,7 @@ Instead edit gulp/templates/sprite */
     padding-right: 0;
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .primary-nav li:last-child{
       padding-right: 20px
@@ -1523,7 +1541,7 @@ Instead edit gulp/templates/sprite */
     background-color: rgba(13, 7, 14, 0.34);
   }
 
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
 .primary-nav a{
       font-size:1rem;
@@ -1619,7 +1637,7 @@ Instead edit gulp/templates/sprite */
     position: relative;
   }
 
-@media(min-width: 530px){
+@media(min-width: 530px) {
 
 .social-icons__icon {
       width: 72px;

@@ -4,18 +4,22 @@
   text-decoration: none;
   padding: .85rem 1.1rem;
   display: inline-block;
+  transition: all 0.7s ease 0s;
+
+  &:hover {
+    border-radius: 50px;
+    text-shadow: 1px 2px 12px rgba(255, 255, 255, 1);
+  }
 
   &--large {
     padding: .6rem .6rem;
     border: solid 0.85px white;
+    border-radius: 50px;
     background: $mainPurple;
     color: #FFF;
     font-size: 1rem;
-    border-radius: 50px;
     box-shadow: 0px 3px 7px #888888;
     margin-top: 7%;
-
-    &:hover {}
 
     &:active {
       box-shadow: 0px 3px 1px #888888;
@@ -28,14 +32,12 @@
     }
 
     @mixin atMedium {
-      border-radius: 0px;
+      border-radius: 10px;
       font-size: 1.2rem;
 
       &:hover {
-        border-radius: 50px;
-        text-shadow: 0px 1px 7px rgba(255, 255, 255, 1);
-        box-shadow: 0px 1px 3px #888888;
-        transition: all 0.6s ease 0s;
+        box-shadow: 0px 0px 1px #888888;
+        transition: all 0.7s ease 0s;
       }
     }
 

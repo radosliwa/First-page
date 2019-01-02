@@ -1,23 +1,24 @@
-.testimonial{
+.testimonial {
   background-color: rgba(59, 0, 61, .3);
   padding: 0 18px 1px 18px;
   margin-bottom: 110px;
 
-  @mixin atLarge{
+  @mixin atLarge {
     padding: 0 1.81rem 1px 1.81rem;
     margin-bottom: 0;
   }
 
-
-  &--last{
+  &--last {
     margin-bottom: 0;
   }
-  &__foto{
+
+  &__foto {
     border-radius: 50%;
     overflow: hidden;
     width: 160px;
     height: 160px;
-    margin: 0 auto -80px auto;/* 80
+    margin: 0 auto -80px auto;
+    /* 80
     bo przy relative reszta contentu nie zauwazyla
     ze przesunelo sie w gore o 80px*/
     position: relative;
@@ -25,13 +26,14 @@
     border: 6px solid rgba(255, 255, 255, .3);
     box-shadow: 0px 5px 18px 1px black;
   }
-  &__title{
+
+  &__title {
     color: #FFF;
     text-align: center;
     font-size: 1.5rem;
-
   }
-  &__subtitle{
+
+  &__subtitle {
     color: $mainDarkPurple;
     text-align: center;
     font-size: 0.9rem;
