@@ -1,53 +1,57 @@
-.primary-nav{
-
-  &--pull-right{
-    @mixin atMedium{
+.primary-nav {
+  &--pull-right {
+    @mixin atMedium {
       float: right;
     }
   }
-/*here BEM would be an overkill*/
-  ul{
-  padding: 0;
-  margin-top: 3%;
-  @mixin clearfix;
-  @mixin atMedium{
-    margin:0;
 
+  /*here BEM would be an overkill*/
+  &__list {
+    z-index: 999;
+    padding: 0;
+    margin-top: 3%;
+    @mixin clearfix;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+
+    @mixin atMedium {
+      margin: 0;
     }
   }
 
-  li{
+  li {
     list-style: none;
-    display: inline-block;
-    padding-right: 7px;
-    @mixin atMedium{
-      padding-right: 20px;
-      display: block;
-      float: left;
+    margin: 2.5% 4% 1% 0;
+
+    @mixin atMedium {
+      margin: 0 20px;
     }
   }
+
   /*last one doesnt need padding right*/
-  li:last-child{
+  li:last-child {
     padding-right: 0;
-    @mixin atMedium{
+
+    @mixin atMedium {
       padding-right: 20px;
     }
   }
 
-  a{
-    font-size: .8rem;
+  a {
+    font-size: 1rem;
     text-decoration: none;
     font-weight: lighter;
     color: #FFF;
     display: block;
-    padding: 7px 8px;
+    padding: 9px 10px;
     background-color: rgba(13, 7, 14, 0.34);
-    @mixin atMedium{
-      font-size:1rem;
-      padding: 12px 0;
-      background-color:transparent;
 
-      &.is-current-link{
+    @mixin atMedium {
+      padding: 12px 0;
+      background-color: transparent;
+
+      &.is-current-link {
         color: $mainOrange;
       }
     }

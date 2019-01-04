@@ -13,12 +13,10 @@
   }
 
   &--is-expanded {
-    height: 200px;
+    height: auto;
     background-color: rgba(45, 0, 57, 0.8);
 
     &.site-header--dark {
-      height: 110px;
-
       @mixin atMedium {
         height: auto;
       }

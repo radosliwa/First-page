@@ -1,34 +1,36 @@
-.section{
-
+.section {
   padding: 1.2rem 0;
-  @mixin atMedium{
+
+  @mixin atMedium {
     padding: 4.5rem 0;
   }
-  &--no-b-padding-until-medium{
+
+  &--no-b-padding-until-medium {
     padding-bottom: 0;
 
-    @mixin atMedium{
+    @mixin atMedium {
       padding-bottom: 4.5rem;
     }
   }
-/**/
-  &--no-b-padding-until-large{
+
+  /**/
+  &--no-b-padding-until-large {
     padding-bottom: 0;
 
-    @mixin atLarge{
+    @mixin atLarge {
       padding-bottom: 4.5rem;
     }
   }
-  &--purple{
+
+  &--purple {
     background: $mainPurple;
     color: #FFF;
   }
-  &--testimonials{
-    &.lazyloaded{
+
+  &--testimonials {
+    &.lazyloaded {
       background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
       background-size: cover;
-
     }
-
   }
 }

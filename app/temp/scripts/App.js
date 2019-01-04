@@ -11117,7 +11117,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mobileMenu = new _MobileMenu2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
-new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '60%');
+new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '50%');
 var headerSticks = new _HeaderSticks2.default();
 var overlay = new _Overlay2.default();
 
@@ -11234,8 +11234,8 @@ var RevealOnScroll = function () {
           element: currentEl, /*dom element*/
           handler: function handler() {
             (0, _jquery2.default)(currentEl).addClass("reveal-item--is-visible");
-          }, /*what happens to it*/
-          offset: that.offset /*when it happens*/
+          },
+          offset: that.offset
         });
       });
     }
@@ -11287,6 +11287,7 @@ var HeaderSticks = function () {
     this.createHeaderWaypoint();
     this.createSectionWaypoints();
     this.createSmoothScroll();
+    this.removeCurrentLinkWhenOnTop();
     this.refreshWaypoints();
   }
 
@@ -11300,7 +11301,7 @@ var HeaderSticks = function () {
   }, {
     key: 'createSmoothScroll',
     value: function createSmoothScroll() {
-      this.NavLinks.smoothScroll();
+      this.NavLinks.smoothScroll({ offset: "10%", speed: 500 });
     }
   }, {
     key: 'createHeaderWaypoint',
@@ -11310,6 +11311,7 @@ var HeaderSticks = function () {
         element: this.TriggerEl[0], /*no need for "this" change
                                     because element is just a property, not a method*/
         handler: function handler(direction) {
+
           if (direction === "down") {
             that.SiteHeader.addClass('site-header--dark');
           } else {
@@ -11319,32 +11321,48 @@ var HeaderSticks = function () {
       });
     }
   }, {
+    key: 'removeCurrentLinkWhenOnTop',
+    value: function removeCurrentLinkWhenOnTop() {
+      var that = this;
+      new Waypoint({
+        element: this.TriggerEl[0],
+        handler: function handler() {
+          // console.log(this);
+          that.NavLinks.removeClass('is-current-link');
+        },
+        offset: 5
+      });
+    }
+  }, {
     key: 'createSectionWaypoints',
     value: function createSectionWaypoints() {
       var that = this;
-      this.pageSections.each(function (direction) {
+      this.pageSections.each(function () {
         var currentSection = this;
-        if (direction === 'down') {
-          new Waypoint({
-            element: currentSection,
-            handler: function handler() {
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction === 'down') {
               var navLink = currentSection.getAttribute("data-match-link");
               that.NavLinks.removeClass('is-current-link');
               (0, _jquery2.default)(navLink).addClass("is-current-link");
-            },
-            offset: "25%"
-          });
-        } else {
-          new Waypoint({
-            element: currentSection,
-            handler: function handler() {
+            }
+          },
+          offset: "2%"
+        });
+
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            // console.log("working");
+            if (direction === 'up') {
               var navLink = currentSection.getAttribute("data-match-link");
               that.NavLinks.removeClass('is-current-link');
               (0, _jquery2.default)(navLink).addClass("is-current-link");
-            },
-            offset: "5%"
-          });
-        }
+            }
+          },
+          offset: "-55%"
+        });
       });
     }
   }]);

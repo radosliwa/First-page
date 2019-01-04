@@ -21,8 +21,8 @@ class RevealOnScroll{
         element: currentEl, /*dom element*/
         handler:function(){
           $(currentEl).addClass("reveal-item--is-visible");
-        },   /*what happens to it*/
-        offset: that.offset  /*when it happens*/
+        },
+        offset: that.offset  
       });
     });
   }

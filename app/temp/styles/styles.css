@@ -489,13 +489,12 @@ a {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
 .large-banner {
-    display: block
+    display: block;
+    position: absolute
 }
 
     .large-banner__text-content {
-      position: absolute;
-      /*top: 0;
-      left: 0;*/
+      top: 15%;
       width: 100%;
       text-align: center;
     }
@@ -551,7 +550,7 @@ a {
 .large-banner__subtitle {
     margin: 1rem;
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1.27rem;
     font-style: italic;
     color: #FFF;
     text-shadow: 2px 2px 5px #000000;
@@ -740,53 +739,51 @@ a {
 }
   }
 
-.section{
-
+.section {
   padding: 1.2rem 0;
 }
 
 @media(min-width: 800px) {
 
-.section{
+.section {
     padding: 4.5rem 0
 }
   }
 
-.section--no-b-padding-until-medium{
+.section--no-b-padding-until-medium {
     padding-bottom: 0;
   }
 
 @media(min-width: 800px) {
 
-.section--no-b-padding-until-medium{
+.section--no-b-padding-until-medium {
       padding-bottom: 4.5rem
   }
   }
 
 /**/
 
-.section--no-b-padding-until-large{
+.section--no-b-padding-until-large {
     padding-bottom: 0;
   }
 
 @media(min-width: 1010px) {
 
-.section--no-b-padding-until-large{
+.section--no-b-padding-until-large {
       padding-bottom: 4.5rem
   }
   }
 
-.section--purple{
+.section--purple {
     background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
     background: -o-linear-gradient(bottom, #c94b4b, #4b134f);
     background: linear-gradient(to top, #c94b4b, #4b134f);
     color: #FFF;
   }
 
-.section--testimonials.lazyloaded{
+.section--testimonials.lazyloaded {
       background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
       background-size: cover;
-
     }
 
 .headline{
@@ -1310,13 +1307,9 @@ Instead edit gulp/templates/sprite */
   }
 
 .site-header--is-expanded {
-    height: 200px;
+    height: auto;
     background-color: rgba(45, 0, 57, 0.8);
   }
-
-.site-header--is-expanded.site-header--dark {
-      height: 110px;
-    }
 
 @media(min-width: 800px) {
 
@@ -1539,19 +1532,28 @@ Instead edit gulp/templates/sprite */
 
 @media(min-width: 800px) {
 
-.primary-nav--pull-right{
+.primary-nav--pull-right {
       float: right
   }
   }
 
 /*here BEM would be an overkill*/
 
-.primary-nav ul{
-  padding: 0;
-  margin-top: 3%;
+.primary-nav__list {
+    z-index: 999;
+    padding: 0;
+    margin-top: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
   }
 
-.primary-nav ul::after {
+.primary-nav__list::after {
     content: "";
     display: table;
     clear: both;
@@ -1559,58 +1561,54 @@ Instead edit gulp/templates/sprite */
 
 @media(min-width: 800px) {
 
-.primary-nav ul{
-    margin:0
+.primary-nav__list {
+      margin: 0
   }
   }
 
-.primary-nav li{
+.primary-nav li {
     list-style: none;
-    display: inline-block;
-    padding-right: 7px;
+    margin: 2.5% 4% 1% 0;
   }
 
 @media(min-width: 800px) {
 
-.primary-nav li{
-      padding-right: 20px;
-      display: block;
-      float: left
+.primary-nav li {
+      margin: 0 20px
   }
   }
 
 /*last one doesnt need padding right*/
 
-.primary-nav li:last-child{
+.primary-nav li:last-child {
     padding-right: 0;
   }
 
 @media(min-width: 800px) {
 
-.primary-nav li:last-child{
+.primary-nav li:last-child {
       padding-right: 20px
   }
   }
 
-.primary-nav a{
-    font-size: .8rem;
+.primary-nav a {
+    font-size: 1rem;
     text-decoration: none;
     font-weight: lighter;
     color: #FFF;
     display: block;
-    padding: 7px 8px;
+    padding: 9px 10px;
     background-color: rgba(13, 7, 14, 0.34);
   }
 
 @media(min-width: 800px) {
 
-.primary-nav a{
-      font-size:1rem;
+.primary-nav a {
       padding: 12px 0;
-      background-color:transparent
+      background-color: transparent
   }
 
-      .primary-nav a.is-current-link{
+      .primary-nav a.is-current-link {
         color: #fabb69;
       }
   }
