@@ -607,18 +607,20 @@ a {
 
 .btn {
   background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
+  background: -o-linear-gradient(bottom, #c94b4b, #4b134f);
   background: linear-gradient(to top, #c94b4b, #4b134f);
   color: #FFF;
   text-decoration: none;
   padding: .85rem 1.1rem;
   display: inline-block;
   -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
 }
 
 .btn:hover {
     border-radius: 50px;
-    text-shadow: 1px 2px 12px rgba(255, 255, 255, 1);
+    text-shadow: 1px 2px 15px rgba(255, 255, 255, 1);
   }
 
 .btn--large {
@@ -626,6 +628,7 @@ a {
     border: solid 0.85px white;
     border-radius: 50px;
     background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
+    background: -o-linear-gradient(bottom, #c94b4b, #4b134f);
     background: linear-gradient(to top, #c94b4b, #4b134f);
     color: #FFF;
     font-size: 1rem;
@@ -638,6 +641,7 @@ a {
       -webkit-box-shadow: 0px 3px 1px #888888;
               box-shadow: 0px 3px 1px #888888;
       -webkit-transition: all 0.6s ease 0s;
+      -o-transition: all 0.6s ease 0s;
       transition: all 0.6s ease 0s;
     }
 
@@ -660,6 +664,7 @@ a {
         -webkit-box-shadow: 0px 0px 1px #888888;
                 box-shadow: 0px 0px 1px #888888;
         -webkit-transition: all 0.7s ease 0s;
+        -o-transition: all 0.7s ease 0s;
         transition: all 0.7s ease 0s;
       }
   }
@@ -773,6 +778,7 @@ a {
 
 .section--purple{
     background: -webkit-gradient(linear, left bottom, left top, from(#c94b4b), to(#4b134f));
+    background: -o-linear-gradient(bottom, #c94b4b, #4b134f);
     background: linear-gradient(to top, #c94b4b, #4b134f);
     color: #FFF;
   }
@@ -1287,24 +1293,35 @@ Instead edit gulp/templates/sprite */
   padding: 10px 0;
   position: absolute;
   width: 100%;
+  height: 40px;
   z-index: 2;
+  position: fixed;
+  background-color: rgba(45, 0, 57, .9);
   -webkit-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
   transition: background-color .5s ease-out;
 }
-
-.site-header--is-expanded {
-    background-color: rgba(45, 0, 57, 0.8);
-  }
 
 @media(min-width: 800px) {
 
 .site-header {
-    position: fixed;
-    background-color: rgba(45,0,57, .5)
+    height: auto
 }
+  }
 
-    .site-header--dark {
-      background-color: rgba(45, 0, 57, .8);
+.site-header--is-expanded {
+    height: 200px;
+    background-color: rgba(45, 0, 57, 0.8);
+  }
+
+.site-header--is-expanded.site-header--dark {
+      height: 110px;
+    }
+
+@media(min-width: 800px) {
+
+.site-header--is-expanded.site-header--dark {
+        height: auto
     }
   }
 
@@ -1319,21 +1336,25 @@ Instead edit gulp/templates/sprite */
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%) scale(.3);
-            transform: translateX(-50%) scale(.3);
+    -webkit-transform: translateX(-50%) scale(.29);
+        -ms-transform: translateX(-50%) scale(.29);
+            transform: translateX(-50%) scale(.29);
     -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-transition: -webkit-transform .5s ease-out;
-    transition: -webkit-transform .5s ease-out;
-    transition: transform .5s ease-out;
-    transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: -webkit-transform .3s linear;
+    -o-transition: transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear, -webkit-transform .3s linear;
   }
 
 @media(min-width: 530px) {
 
 .site-header__logo {
-      -webkit-transform: translateX(-50%) scale(.485);
-              transform: translateX(-50%) scale(.485)
+      -webkit-transform: translateX(-50%) scale(.38);
+          -ms-transform: translateX(-50%) scale(.38);
+              transform: translateX(-50%) scale(.38)
   }
   }
 
@@ -1343,6 +1364,7 @@ Instead edit gulp/templates/sprite */
       /* padding: 25px 36px; */
       left: -10%;
       -webkit-transform: translateX(9%) scale(.48);
+          -ms-transform: translateX(9%) scale(.48);
               transform: translateX(9%) scale(.48)
   }
   }
@@ -1353,13 +1375,34 @@ Instead edit gulp/templates/sprite */
       /* padding: 25px 36px; */
       left: auto;
       -webkit-transform: scale(.5);
+          -ms-transform: scale(.5);
               transform: scale(.5)
   }
   }
 
+.site-header--dark {
+    background-color: rgba(45,0,57, .6);
+  }
+
 .site-header--dark .site-header__logo {
-      -webkit-transform: scale(.32);
-              transform: scale(.32);
+      opacity: 0;
+      -webkit-transition: all .5s linear;
+      -o-transition: all .5s linear;
+      transition: all .5s linear;
+    }
+
+@media(min-width: 800px) {
+
+.site-header--dark .site-header__logo {
+        opacity: 1;
+        -webkit-transform: scale(.32);
+            -ms-transform: scale(.32);
+                transform: scale(.32)
+    }
+  }
+
+.site-header--dark .site-header__menu-content {
+      padding-top: 0;
     }
 
 .site-header__logo__graphic {
@@ -1385,10 +1428,12 @@ Instead edit gulp/templates/sprite */
       height: 3px;
       background-color: #FFF;
       -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
               transform-origin: 0 0;
       /*top left corner*/
       -webkit-transition: -webkit-transform .3s ease-out;
       transition: -webkit-transform .3s ease-out;
+      -o-transition: transform .3s ease-out;
       transition: transform .3s ease-out;
       transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     }
@@ -1401,6 +1446,7 @@ Instead edit gulp/templates/sprite */
       height: 3px;
       background-color: #FFF;
       -webkit-transition: all .5s ease-out;
+      -o-transition: all .5s ease-out;
       transition: all .5s ease-out;
     }
 
@@ -1413,9 +1459,11 @@ Instead edit gulp/templates/sprite */
       height: 3px;
       background-color: #FFF;
       -webkit-transform-origin: 0 100%;
+          -ms-transform-origin: 0 100%;
               transform-origin: 0 100%;
       -webkit-transition: -webkit-transform .3s ease-out;
       transition: -webkit-transform .3s ease-out;
+      -o-transition: transform .3s ease-out;
       transition: transform .3s ease-out;
       transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     }
@@ -1429,17 +1477,20 @@ Instead edit gulp/templates/sprite */
 
 .site-header__menu-icon--close-x::before {
       -webkit-transform: rotate(45deg) scaleX(1.25);
+          -ms-transform: rotate(45deg) scaleX(1.25);
               transform: rotate(45deg) scaleX(1.25);
     }
 
 .site-header__menu-icon--close-x .site-header__menu-icon__middle {
       opacity: 0;
       -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
               transform: scaleX(0);
     }
 
 .site-header__menu-icon--close-x::after {
       -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+          -ms-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
               transform: rotate(-45deg) scaleX(1.25) translateY(1px);
     }
 
@@ -1448,8 +1499,10 @@ Instead edit gulp/templates/sprite */
     /*^ instead of display:none for beter animation
     but we'll have to use z-index to hide it from the browser*/
     -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
             transform: scale(1.2);
     -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
     position: relative;
     /*otherwise z-index wont work*/
@@ -1465,6 +1518,7 @@ Instead edit gulp/templates/sprite */
       z-index: 1;
       padding-top: 0;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1)
   }
   }
@@ -1473,8 +1527,15 @@ Instead edit gulp/templates/sprite */
       opacity: 1;
       z-index: 1;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1);
     }
+
+.site-header__mainH1 {
+    top: 0;
+    position: absolute;
+    opacity: 0;
+  }
 
 @media(min-width: 800px) {
 
@@ -1557,14 +1618,17 @@ Instead edit gulp/templates/sprite */
 .reveal-item{
   opacity:0;
   -webkit-transition: all 1.3s ease-out;
+  -o-transition: all 1.3s ease-out;
   transition: all 1.3s ease-out;
   -webkit-transform:scale(1.2);
+      -ms-transform:scale(1.2);
           transform:scale(1.2);
 }
 
 .reveal-item--is-visible{
     opacity:1;
     -webkit-transform:scale(1);
+        -ms-transform:scale(1);
             transform:scale(1);
   }
 
@@ -1581,8 +1645,10 @@ Instead edit gulp/templates/sprite */
   /*bo przy samym opacity nadal pojawial
   sie pointer*/
   -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
           transform: scale(1.5);
   -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
@@ -1590,6 +1656,7 @@ Instead edit gulp/templates/sprite */
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1);
+        -ms-transform: scale(1);
             transform: scale(1);
   }
 
@@ -1606,8 +1673,10 @@ Instead edit gulp/templates/sprite */
     right: 15px;
     font-size: 2rem;
     -webkit-transform: scaleX(1.2);
+        -ms-transform: scaleX(1.2);
             transform: scaleX(1.2);
     -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
             transform-origin: 100% 0;
   }
 
@@ -1621,6 +1690,7 @@ Instead edit gulp/templates/sprite */
     width: 100%;
     top: 50%;
     -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
   }
 
@@ -1651,5 +1721,6 @@ Instead edit gulp/templates/sprite */
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }

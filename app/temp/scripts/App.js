@@ -11149,13 +11149,25 @@ var MobileMenu = function () {
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
     this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
+    this.primaryNav = (0, _jquery2.default)('.primary-nav');
     this.events();
+    this.goToSection();
   }
 
   _createClass(MobileMenu, [{
     key: 'events',
     value: function events() {
       this.menuIcon.click(this.toggleTheMenu.bind(this));
+    }
+  }, {
+    key: 'goToSection',
+    value: function goToSection() {
+      var that = this;
+      this.primaryNav.click(function () {
+
+        that.siteHeader.removeClass('site-header--is-expanded');
+        that.menuContent.removeClass('site-header__menu-content--is-visible');
+      });
     }
   }, {
     key: 'toggleTheMenu',
