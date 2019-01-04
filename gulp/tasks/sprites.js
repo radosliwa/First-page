@@ -6,7 +6,7 @@ del = require('del');
 var config = {
   shape:{
     spacing:{
-      padding: 1
+      padding: 1.5
     }
   },
   mode: {

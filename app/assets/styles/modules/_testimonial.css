@@ -1,7 +1,10 @@
 .testimonial {
-  background-color: rgba(59, 0, 61, .3);
   padding: 0 18px 1px 18px;
   margin-bottom: 110px;
+
+  @mixin atMedium {
+    background-color: rgba(59, 0, 61, .3);
+  }
 
   @mixin atLarge {
     padding: 0 1.81rem 1px 1.81rem;

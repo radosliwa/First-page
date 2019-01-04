@@ -28,9 +28,13 @@
   }
 
   &--testimonials {
+    background-color: rgba(118, 0, 61, .3);
+
     &.lazyloaded {
-      background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
-      background-size: cover;
+      @mixin atMedium {
+        background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;
+      }
     }
   }
 }
