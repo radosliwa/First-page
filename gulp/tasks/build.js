@@ -7,7 +7,7 @@ var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
-gulp.task('previewDist',function(){
+gulp.task('previewDocs',function(){
   browserSync.init({
     notify: false,
     server:{
@@ -16,10 +16,10 @@ gulp.task('previewDist',function(){
   });
 });
 
-gulp.task('delDist',['icons'],function(){
+gulp.task('delDocs',['icons'],function(){
   return del('./docs');
 });
-gulp.task('optimizePics',['delDist'], function(){
+gulp.task('optimizePics',['delDocs'], function(){
   return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
     .pipe(imageMin({
       progressive: true,
@@ -29,7 +29,7 @@ gulp.task('optimizePics',['delDist'], function(){
     .pipe(gulp.dest('./docs/assets/images'));
 });
 
-gulp.task('useminStart',['delDist'], function(){
+gulp.task('useminStart',['delDocs'], function(){
   gulp.start('usemin');
 });
 
@@ -42,4 +42,4 @@ gulp.task('usemin',['styles','scripts'],function(){
   .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('build',['delDist','optimizePics','useminStart']);
+gulp.task('build',['delDocs','optimizePics','useminStart']);
