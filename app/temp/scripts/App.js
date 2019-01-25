@@ -11149,7 +11149,7 @@ var MobileMenu = function () {
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
     this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
-    this.primaryNav = (0, _jquery2.default)('.primary-nav');
+    this.primaryNavEl = (0, _jquery2.default)('.primary-nav a');
     this.events();
     this.goToSection();
   }
@@ -11163,10 +11163,8 @@ var MobileMenu = function () {
     key: 'goToSection',
     value: function goToSection() {
       var that = this;
-      this.primaryNav.click(function () {
-
-        that.siteHeader.removeClass('site-header--is-expanded');
-        that.menuContent.removeClass('site-header__menu-content--is-visible');
+      this.primaryNavEl.click(function () {
+        that.toggleTheMenu();
       });
     }
   }, {
@@ -11301,15 +11299,19 @@ var HeaderSticks = function () {
   }, {
     key: 'createSmoothScroll',
     value: function createSmoothScroll() {
-      this.NavLinks.smoothScroll({ offset: "10%", speed: 500 });
+      this.NavLinks.smoothScroll({
+        offset: "10%",
+        speed: 500
+      });
     }
   }, {
     key: 'createHeaderWaypoint',
     value: function createHeaderWaypoint() {
       var that = this;
       new Waypoint({
-        element: this.TriggerEl[0], /*no need for "this" change
-                                    because element is just a property, not a method*/
+        element: this.TriggerEl[0],
+        /*no need for "this" change
+             because element is just a property, not a method*/
         handler: function handler(direction) {
 
           if (direction === "down") {
@@ -11348,7 +11350,7 @@ var HeaderSticks = function () {
               (0, _jquery2.default)(navLink).addClass("is-current-link");
             }
           },
-          offset: "2%"
+          offset: "20%"
         });
 
         new Waypoint({

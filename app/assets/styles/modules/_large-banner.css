@@ -7,7 +7,6 @@
 
   @mixin forIE {
     display: block;
-    position: absolute;
 
     &__text-content {
       top: 15%;

@@ -489,8 +489,7 @@ a {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
 .large-banner {
-    display: block;
-    position: absolute
+    display: block
 }
 
     .large-banner__text-content {
