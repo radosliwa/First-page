@@ -474,7 +474,6 @@ a {
 
 .large-banner {
   border-bottom: 10px solid #2D0039;
-  height: 100vh;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

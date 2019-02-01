@@ -1,6 +1,5 @@
 .large-banner {
   border-bottom: 10px solid $mainDarkPurple;
-  height: 100vh;
 
   @mixin forIE {
     display: block;

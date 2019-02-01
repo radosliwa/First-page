@@ -8,9 +8,9 @@
   <title>Radek's Travel Agency</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
   <meta name="description" content="Rest your mind and your soul. With just one trip">
-  <link rel="stylesheet" href="assets/styles/styles-9476ddd6e3.css"/>
+  <link rel="stylesheet" href="assets/styles/styles-6599506b76.css"/>
 
-  <script src="assets/scripts/Vendor-62387867cd.js"></script>
+  <script src="assets/scripts/Vendor-cb88f22163.js"></script>
 </head>
 
 <body>
@@ -39,14 +39,15 @@
   </header>
 
   <div class="large-banner">
-    <picture>
-      <source data-srcset="assets/images/banner--large.jpg" media="(min-width: 1380px)">
-      <source data-srcset="assets/images/banner--medium.jpg" media="(min-width: 990px)">
-      <source data-srcset="assets/images/banner--small.jpg" media="(min-width: 640px)">
-      <source data-srcset="assets/images/banner--smaller.jpg" media="(max-width: 639px)">
-      <img data-src="assets/images/banner--large.jpg" alt="coastline" class="large-banner__image lazyload">
-    </picture>
-
+    <div class='imgContainer imgContainer__forBanner'>
+      <picture>
+        <source data-srcset="assets/images/banner--large.jpg 1920w" media="(min-width: 1010px)">
+        <source data-srcset="assets/images/banner--medium.jpg 1380w" media="(min-width: 800px)">
+        <source data-srcset="assets/images/banner--small.jpg 990w" media="(min-width: 530px)">
+        <source data-srcset="assets/images/banner--smaller.jpg 640w" media="(max-width: 529px)">
+        <img data-src="assets/images/banner--large.jpg" alt="coastline" class="lazyload">
+      </picture>
+    </div>
     <div class="large-banner__text-content">
       <div class="wrapper">
         <h2 class="large-banner__title">Your Rested Self...</h2>
@@ -62,15 +63,15 @@
       <h2 class="headline headline--centered headline--b-margin-small">Lorem ipsum dolor sit amet<strong> consectetur adipisicing elit.</strong></h2>
       <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--b-margin-large"> Ipsam excepturi pariatur mollitia non. <strong>Culpa
           dolor ad ducimus.</strong></h3>
-      <div class="wrapper wrapper--medium wrapper--b-margin">
+      <div class="wrapper wrapper--medium wrapper--b-margin imgContainer imgContainer__forFirstTrip">
 
         <img class="lazyload" data-src="assets/images/first-trip.jpg" data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w" alt="family on a pier">
       </div>
 
       <div class="row row--gutters">
-        <div class="row__medium-4 row__medium-4-larger row__b-margin-until-medium">
+        <div class="row__medium-4 row__medium-4-larger row__b-margin-until-medium imgContainer imgContainer__forOurStart">
           <picture>
-            <source data-srcset="assets/images/our-start.jpg 404w" media='(min-width: 1020px)'>
+            <source data-srcset="assets/images/our-start.jpg 404w" media='(min-width: 1010px)'>
             <source data-srcset="assets/images/our-start-portrait.jpg 764w" media='(min-width: 800px)'>
             <img class="lazyload" data-src="assets/images/our-start-landscape.jpg" data-srcset="assets/images/our-start-landscape.jpg 800w" alt="Our founder, Jane Doe">
           </picture>
@@ -87,9 +88,7 @@
               dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum
               <strong>dolore eu fugiat.</strong></p>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -199,7 +198,7 @@
       X
     </div>
   </div>
-  <script src="assets/scripts/App-3ed270b403.js"></script>
+  <script src="assets/scripts/App-53394ea02e.js"></script>
 </body>
 
 </html>
