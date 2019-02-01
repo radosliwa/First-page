@@ -17,7 +17,7 @@
     border-radius: 50px;
     background: $mainPurple;
     color: #FFF;
-    font-size: 1rem;
+    font-size: 1.15rem;
     box-shadow: 0px 3px 7px #888888;
     margin-top: 7%;
 
@@ -27,13 +27,13 @@
     }
 
     @mixin atSmall {
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       margin-top: 0;
     }
 
     @mixin atMedium {
       border-radius: 10px;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
 
       &:hover {
         box-shadow: 0px 0px 1px #888888;

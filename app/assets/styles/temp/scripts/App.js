@@ -11286,9 +11286,17 @@ var HeaderSticks = function () {
     this.createSectionWaypoints();
     this.createSmoothScroll();
     this.removeCurrentLinkWhenOnTop();
+    this.refreshWaypoints();
   }
 
   _createClass(HeaderSticks, [{
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: 'createSmoothScroll',
     value: function createSmoothScroll() {
       this.NavLinks.smoothScroll();

@@ -1,9 +1,6 @@
 .large-banner {
   border-bottom: 10px solid $mainDarkPurple;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
 
   @mixin forIE {
     display: block;
@@ -13,18 +10,20 @@
       width: 100%;
       text-align: center;
     }
+
+    img {
+      height: 100vh;
+    }
   }
 
-  &__image {
+  img {
     display: block;
     /*eliminated gap between img and border*/
   }
 
   &__text-content {
-    padding-top: 4.5rem;
     position: absolute;
-    /*top: 0;
-    left: 0;*/
+    top: 30%;
     width: 100%;
     text-align: center;
 
@@ -32,53 +31,56 @@
   }
 
   &__title {
-    margin: 0;
+    margin-top: 1.4rem;
+    margin-bottom: .5rem;
     font-weight: 400;
     font-style: italic;
     color: #FFF;
     text-shadow: 2px 2px 10px #000000;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 
     @mixin atSmall {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
     @mixin atMedium {
-      font-size: 3rem;
+      margin-top: 0;
+      font-size: 3.2rem;
     }
 
     @mixin atLarge {
-      font-size: 3.3rem;
+      font-size: 3.5rem;
     }
   }
 
   &__subtitle {
-    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
     font-weight: 300;
-    font-size: 1.27rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: #FFF;
     text-shadow: 2px 2px 5px #000000;
 
     @mixin atSmall {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
     }
 
     @mixin atMedium {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
 
     @mixin atLarge {
-      font-size: 2.3rem;
+      font-size: 2.6rem;
     }
   }
 
   &__description {
     font-style: italic;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #FFF;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
-    width: 90vw;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     line-height: 2rem;
@@ -86,7 +88,7 @@
 
     @mixin atSmall {
       font-size: 1.4rem;
-      width: 50%;
+      width: 70%;
     }
 
     @mixin atLarge {

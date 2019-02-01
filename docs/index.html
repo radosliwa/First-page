@@ -8,7 +8,7 @@
   <title>Radek's Travel Agency</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
   <meta name="description" content="Rest your mind and your soul. With just one trip">
-  <link rel="stylesheet" href="assets/styles/styles-78291c43cc.css"/>
+  <link rel="stylesheet" href="assets/styles/styles-9476ddd6e3.css"/>
 
   <script src="assets/scripts/Vendor-62387867cd.js"></script>
 </head>
@@ -40,10 +40,11 @@
 
   <div class="large-banner">
     <picture>
-      <source srcset="assets/images/banner--large.jpg" media="(min-width: 1380px)">
-      <source srcset="assets/images/banner--medium.jpg" media="(min-width: 990px)">
-      <source srcset="assets/images/banner--small.jpg" media="(min-width: 640px)">
-      <img src="assets/images/banner--smaller.jpg" alt="coastline" class="large-banner__image lazyload">
+      <source data-srcset="assets/images/banner--large.jpg" media="(min-width: 1380px)">
+      <source data-srcset="assets/images/banner--medium.jpg" media="(min-width: 990px)">
+      <source data-srcset="assets/images/banner--small.jpg" media="(min-width: 640px)">
+      <source data-srcset="assets/images/banner--smaller.jpg" media="(max-width: 639px)">
+      <img data-src="assets/images/banner--large.jpg" alt="coastline" class="large-banner__image lazyload">
     </picture>
 
     <div class="large-banner__text-content">
@@ -63,7 +64,7 @@
           dolor ad ducimus.</strong></h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
 
-        <img class="lazyload" data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w" alt="family on a pier">
+        <img class="lazyload" data-src="assets/images/first-trip.jpg" data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w" alt="family on a pier">
       </div>
 
       <div class="row row--gutters">
@@ -71,7 +72,7 @@
           <picture>
             <source data-srcset="assets/images/our-start.jpg 404w" media='(min-width: 1020px)'>
             <source data-srcset="assets/images/our-start-portrait.jpg 764w" media='(min-width: 800px)'>
-            <img class="lazyload" data-srcset="assets/images/our-start-landscape.jpg 800w" alt="Our founder, Jane Doe">
+            <img class="lazyload" data-src="assets/images/our-start-landscape.jpg" data-srcset="assets/images/our-start-landscape.jpg 800w" alt="Our founder, Jane Doe">
           </picture>
 
         </div>
@@ -139,7 +140,7 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__foto">
-              <img class="lazyload" srcset="assets/images/testimonial-wolf.jpg" alt="picture of Robert Racoon">
+              <img class="lazyload" data-src="assets/images/testimonial-wolf.jpg" alt="picture of Robert Racoon">
             </div>
             <h3 class="testimonial__title">Robert Wolf</h3>
             <h4 class="testimonial__subtitle"> Lorem ipsum</h4>
@@ -151,7 +152,7 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__foto">
-              <img class="lazyload" srcset="assets/images/testimonial-bulldog.jpg" alt="picture of Bill McBulldog">
+              <img class="lazyload" data-src="assets/images/testimonial-bulldog.jpg" alt="picture of Bill McBulldog">
             </div>
             <h3 class="testimonial__title">Bill McBulldog</h3>
             <h4 class="testimonial__subtitle">Lorem ipsum</h4>
@@ -163,7 +164,7 @@
         <div class="row__large-4">
           <div class="testimonial testimonial--last">
             <div class="testimonial__foto">
-              <img class="lazyload" srcset="assets/images/testimonial-cat.jpg" alt="picture of Cat McKitty">
+              <img class="lazyload" data-src="assets/images/testimonial-cat.jpg" alt="picture of Cat McKitty">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
             <h4 class="testimonial__subtitle">Lorem ipsum</h4>
@@ -198,7 +199,7 @@
       X
     </div>
   </div>
-  <script src="assets/scripts/App-cf25cb8383.js"></script>
+  <script src="assets/scripts/App-3ed270b403.js"></script>
 </body>
 
 </html>

@@ -13,20 +13,12 @@ class HeaderSticks {
     this.createSectionWaypoints();
     this.createSmoothScroll();
     this.removeCurrentLinkWhenOnTop();
-    this.refreshWaypoints();
+
   }
 
-  refreshWaypoints() {
-    this.lazyImages.on('load', function() {
-      Waypoint.refreshAll();
-    })
-  }
+
   createSmoothScroll() {
-    this.NavLinks.smoothScroll({
-      offset: "10%",
-      speed: 500
-    });
-
+    this.NavLinks.smoothScroll();
   }
 
   createHeaderWaypoint() {

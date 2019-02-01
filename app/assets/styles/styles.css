@@ -1,4 +1,5 @@
-@import "normalize.css"; /* nie trzeba navigowac do
+@import "normalize.css";
+/* nie trzeba navigowac do
 node_modules dzieki postcss-import*/
 @import 'base/_variables';
 @import 'base/_mixins';
@@ -20,3 +21,4 @@ node_modules dzieki postcss-import*/
 @import "modules/_reveal-item";
 @import "modules/_overlay";
 @import "modules/_social-icons";
+@import "modules/_imgContainer";
