@@ -848,7 +848,14 @@ a {
   }
 
 .row--t-padding {
-    padding-top: 100px;
+    padding-top: 77px;
+  }
+
+@media(min-width: 530px) {
+
+.row--t-padding {
+      padding-top: 100px
+  }
   }
 
 .row--gutters {
@@ -994,116 +1001,111 @@ a {
     font-style: italic;
   }
 
-.section-title{
-  font-size: 2rem;
+.section-title {
+  font-size: 1.7rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 4rem;
   text-shadow: 1px 2px 5px #000000;
 }
 
 @media(min-width: 530px) {
 
-.section-title{
+.section-title {
     font-size: 3rem
 }
   }
 
 @media(min-width: 800px) {
 
-.section-title{
+.section-title {
     margin-bottom: 2rem;
     text-shadow: none
 }
   }
 
-.section-title strong{
+.section-title strong {
     font-weight: bold;
   }
 
-.section-title--white{
+.section-title--white {
     color: #FFF;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 1px 2px 5px #000000;
   }
 
 @media(min-width: 800px) {
 
-.section-title--white{
+.section-title--white {
       font-size: 3rem;
       text-shadow: none
   }
   }
 
-.section-title--dark{
-    color:#2D0039;
-    margin-top:0;
+.section-title--dark {
+    color: #2D0039;
+    margin-top: 0;
   }
 
-.section-title__icon{
-
-    display:block;
+.section-title__icon {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: .6rem;
-
   }
 
 @media(min-width: 530px) {
 
-.section-title__icon{
+.section-title__icon {
       position: relative;
       top: 10px;
       margin-right: .5rem;
       margin-left: 0;
       margin-bottom: 0;
       display: inline-block
-
   }
   }
 
-.feature-item{
+.feature-item {
   position: relative;
   padding-bottom: 2.5rem;
-
 }
 
 @media(min-width: 530px) {
 
-.feature-item{
-        padding-left: 94px
-
+.feature-item {
+    padding-left: 94px
 }
   }
 
-.feature-item__icon{
-  display: block;
-  margin: 0 auto;
-    }
+.feature-item__icon {
+    display: block;
+    margin: 0 auto;
+  }
 
 @media(min-width: 530px) {
 
-.feature-item__icon{
-        position: absolute;
-        left: 0
-    }
+.feature-item__icon {
+      position: absolute;
+      left: 0
+  }
   }
 
-.feature-item__title{
+.feature-item__title {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: .7em;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+@media(min-width: 530px) {
+
+.feature-item__title {
       font-size: 1.6rem;
-      font-weight: 300;
-      margin-top: .7em;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-@media(min-width: 530px) {
-
-.feature-item__title{
-        text-align: left;
-        margin-top: 1em;
-        font-size: 1.75rem
-    }
+      text-align: left;
+      margin-top: 1em;
+      font-size: 1.75rem
+  }
   }
 
 .testimonial {
@@ -1794,3 +1796,8 @@ Instead edit gulp/templates/sprite */
       height: 100%;
     }
 }
+
+.lazyloading .imgContainer__forBanner {
+    background: url('/assets/images/banner--smaller-LOWFI.jpg') center center no-repeat;
+    background-size: cover;
+  }

@@ -64,3 +64,10 @@
     }
   }
 }
+
+.lazyloading {
+  .imgContainer__forBanner {
+    background: url('/assets/images/banner--smaller-LOWFI.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}

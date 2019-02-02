@@ -2,7 +2,11 @@
   @mixin clearfix;
 
   &--t-padding {
-    padding-top: 100px;
+    padding-top: 77px;
+
+    @mixin atSmall {
+      padding-top: 100px;
+    }
   }
 
   &--gutters {
