@@ -7,8 +7,8 @@ class MobileMenu {
     this.menuIcon = $('.site-header__menu-icon');
     this.menuContent = $('.site-header__menu-content');
     this.primaryNavEl = $('.primary-nav a');
-    this.events();
     this.goToSection();
+    this.events();
   }
   events() {
     this.menuIcon.click(this.toggleTheMenu.bind(this));

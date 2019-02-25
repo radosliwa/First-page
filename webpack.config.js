@@ -6,19 +6,18 @@ module.exports = {
     Vendor: "./app/assets/scripts/Vendor.js"
   },
   output: {
-    path: path.resolve(__dirname,"./app/temp/scripts"),
+    path: path.resolve(__dirname, "./app/temp/scripts"),
     filename: "[name].js"
   },
+  devtool: "#inline-source-map",
   module: {
-    loaders: [
-      {
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        },
-        test: /\.js$/,
-        exclude: /node_modules/
-      }
-    ]
+    loaders: [{
+      loader: 'babel-loader',
+      query: {
+        presets: ['es2015']
+      },
+      test: /\.js$/,
+      exclude: /node_modules/
+    }]
   }
 }
